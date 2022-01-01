@@ -87,10 +87,15 @@
         </div>
       </div>
     </div>
+
+    <MeasureFramework />
+    <Outcome :goals="goals" />
   </section>
 </template>
 
 <script>
+import MeasureFramework from "./MeasureFramework.vue";
+import Outcome from "./Outcome.vue";
 export default {
   data() {
     return {
@@ -98,18 +103,8 @@ export default {
       problems: [],
       goalsProgram: "",
       goals: [],
+      goalNumber: [],
     };
-  },
-  mounted() {
-    // console.log(this.goalsTag);
-  },
-  watch: {
-    goals: {
-      handler(string) {
-        localStorage.setItem("goals", JSON.stringify(string));
-      },
-      deep: true,
-    },
   },
   methods: {
     // Programs Problem
@@ -121,11 +116,11 @@ export default {
     deleteProblemsTag(id) {
       this.problems.splice(id, 1);
     },
-
     // Programs Goals
     goalsTag() {
       if (!this.goalsProgram == "") {
         this.goals.push(this.goalsProgram);
+
         // localStorage.setItem("goals", JSON.stringify(this.goals));
       }
     },
@@ -133,6 +128,7 @@ export default {
       this.goals.splice(id, 1);
     },
   },
+  components: { MeasureFramework, Outcome },
 };
 </script>
 

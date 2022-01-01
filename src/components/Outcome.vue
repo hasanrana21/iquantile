@@ -6,7 +6,7 @@
     </p>
 
     <!-- Dynamic Goals -->
-    <div v-for="(goal, index) in allGoals" :key="index">
+    <div v-for="(goal, index) in goals" :key="index">
       <div class="my-6">
         <h4 class="text-red-600 text-lg font-semibold">Goal 01: {{ goal }}</h4>
         <p class="text-gray-400">Select measure parameters</p>
@@ -76,6 +76,7 @@
 <script>
 export default {
   name: "Outcome",
+  props: ["goals"],
   data() {
     return {
       checkMeet: false,
@@ -91,6 +92,7 @@ export default {
     if (localStorage.goals) {
       this.allGoals = JSON.parse(localStorage.getItem("goals")) || [];
     }
+    console.log(this.goals);
   },
   methods: {
     //  Other Functions
