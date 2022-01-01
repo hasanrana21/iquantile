@@ -94,31 +94,34 @@
 export default {
   data() {
     return {
-      goalsProgram: "",
-      goals: [],
       programsProblem: "",
       problems: [],
+      goalsProgram: "",
+      goals: [],
     };
   },
   mounted() {
-    console.log(this.goalsTag);
+    // console.log(this.goalsTag);
   },
   methods: {
-    goalsTag() {
-      if (!this.goalsProgram == "") {
-        this.goals.push(this.goalsProgram);
-      }
-    },
+    // Programs Problem
     problemsTag() {
       if (!this.programsProblem == "") {
         this.problems.push(this.programsProblem);
       }
     },
-    deleteGoalsTag(id) {
-      this.goals.splice(id, 1);
-    },
     deleteProblemsTag(id) {
       this.problems.splice(id, 1);
+    },
+
+    // Programs Goals
+    goalsTag() {
+      if (!this.goalsProgram == "") {
+        this.goals.push(this.goalsProgram);
+      }
+    },
+    deleteGoalsTag(id) {
+      this.goals.splice(id, 1);
     },
   },
 };
