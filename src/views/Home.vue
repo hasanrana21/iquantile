@@ -1,18 +1,20 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="px-24 py-12 bg-gray-200">
+    <ProgramDesign />
+    <MeasureFramework />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import ProgramDesign from "@/components/ProgramDesign";
+import MeasureFramework from "../components/MeasureFramework.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    ProgramDesign,
+    MeasureFramework,
   },
 };
 </script>
