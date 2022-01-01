@@ -34,7 +34,7 @@
             v-model="optionPersonal"
             @change="personalTags"
           >
-            <option selected disabled>Please select one ---</option>
+            <option selected disabled>Select personnel ---</option>
             <option>Santa Shields</option>
             <option>Lester Hudson</option>
             <option>Personal 3</option>
@@ -79,7 +79,7 @@
             v-model="funding"
             @change="fundingTags"
           >
-            <option selected disabled>Please select one ---</option>
+            <option selected disabled>Select and press enter ---</option>
             <option>Government Fund</option>
             <option>Private Fund</option>
             <option>Funding 3</option>
@@ -126,7 +126,7 @@
             v-model="partnership"
             @change="partnershipTags"
           >
-            <option selected disabled>Please select one ---</option>
+            <option selected disabled>Select partner organizations ---</option>
             <option>Collier and Sons</option>
             <option>Leuschke Grouppartnership</option>
             <option>partnership 3</option>
@@ -171,6 +171,7 @@
             id="partnership"
             v-model="other"
             @keyup.enter="otherTags"
+            placeholder="Write and press enter"
           />
 
           <!-- Show Tags -->

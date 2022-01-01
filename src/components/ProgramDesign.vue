@@ -103,6 +103,14 @@ export default {
   mounted() {
     // console.log(this.goalsTag);
   },
+  watch: {
+    goals: {
+      handler(string) {
+        localStorage.setItem("goals", JSON.stringify(string));
+      },
+      deep: true,
+    },
+  },
   methods: {
     // Programs Problem
     problemsTag() {
@@ -118,6 +126,7 @@ export default {
     goalsTag() {
       if (!this.goalsProgram == "") {
         this.goals.push(this.goalsProgram);
+        // localStorage.setItem("goals", JSON.stringify(this.goals));
       }
     },
     deleteGoalsTag(id) {
