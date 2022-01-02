@@ -1,5 +1,5 @@
 # iquantile-task
-
+Live Link:  https://iquantile-task-by-hasan.netlify.app/
 ## Project setup
 ```
 yarn install
